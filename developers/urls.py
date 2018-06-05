@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^(?P<pk>\w+)/$', views.get_code),
     re_path(r'^$', views.editor),
-    re_path('',views.does_not_exist),
+    #re_path('',views.does_not_exist),
 ]
