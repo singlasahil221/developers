@@ -6,4 +6,4 @@ class code_model(models.Model):
 	time_stamp = models.DateTimeField(default = datetime.now)
 	HTML_code = models.CharField(max_length=100000)
 	def __str__(self):
-		return self.HTML_code
+		return self.custom_Key
