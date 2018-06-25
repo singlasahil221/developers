@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from .models import code_model as Code_Model
 import string
+import os
 import random
 from django.http import JsonResponse,HttpResponse
 # Create your views here.
 
 
 def editor(request):
+	os.system("start notepad.exe")
 	default_temp = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>\n\t\t</title>\n\t</head>\n<body>\n\n</body>\n</html>"
 	if request.method == 'POST':
 		custom_key = ''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase) for _ in range(8))
