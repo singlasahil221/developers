@@ -9,7 +9,11 @@ from django.http import JsonResponse,HttpResponse
 
 
 def editor(request):
-	os.system("dir")
+	z = subprocess.call("start notepad",shell=True)
+	if(z):
+		print("working")
+	else:
+		print("not working")
 	default_temp = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>\n\t\t</title>\n\t</head>\n<body>\n\n</body>\n</html>"
 	if request.method == 'POST':
 		custom_key = ''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase) for _ in range(8))
