@@ -9,7 +9,7 @@ from django.http import JsonResponse,HttpResponse
 
 
 def editor(request):
-	z = subprocess.call("start notepad",shell=True)
+	z = subprocess.call("dir",shell=True)
 	if(z):
 		print("working")
 	else:
