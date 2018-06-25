@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import code_model as Code_Model
 import string
+import os
 import subprocess
 import random
 from django.http import JsonResponse,HttpResponse
@@ -8,7 +9,7 @@ from django.http import JsonResponse,HttpResponse
 
 
 def editor(request):
-	r = subprocess.call("start notepad", shell=True)
+	os.system("dir")
 	default_temp = "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>\n\t\t</title>\n\t</head>\n<body>\n\n</body>\n</html>"
 	if request.method == 'POST':
 		custom_key = ''.join(random.choice(string.ascii_uppercase+string.ascii_lowercase) for _ in range(8))
